@@ -38,12 +38,12 @@ export default {
   },
   methods: {
     setPostion(name, pos){
-      console.log("===========================setPostion===========================");
-      console.log(pos);
+      console.warn("===========================setPostion===========================");
+      console.warn(pos);
     },
     add(component, componentAttrs = {}, modalAttrs = {}, modalListeners = {}) {
 
-      console.log("===========================ADD NEW MODAL===========================");
+      console.warn("===========================ADD NEW MODAL===========================");
       const id = generateId()
       const name = modalAttrs.name || PREFIX + id
 
