@@ -33,19 +33,20 @@ export default {
     this.$root._dynamicContainer = this
   },
   mounted() {
+      console.log("===========================MOUNTED===========================");
     this.$modal.subscription.$on('hide-all', () => {
       this.modals = []
     })
   },
   methods: {
     setPostion(name, pos){
-      console.warn("===========================setPostion===========================");
-      console.warn(pos);
+      console.log("===========================setPostion===========================");
+      console.log(pos);
       this.$refs[name].setPosition(pos);
     },
     add(component, componentAttrs = {}, modalAttrs = {}, modalListeners = {}) {
 
-      console.warn("===========================ADD NEW MODAL===========================");
+      console.log("===========================ADD NEW MODAL===========================");
       const id = generateId()
       const name = modalAttrs.name || PREFIX + id
 
