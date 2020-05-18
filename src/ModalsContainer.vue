@@ -12,6 +12,7 @@
         v-bind="modal.componentAttrs"
         v-on="$listeners"
         @close="$modal.hide(modal.modalAttrs.name, $event)"
+        @setPosition="setPostion(modal.modalAttrs.name, $event)"
       />
     </modal>
   </div>
@@ -36,7 +37,13 @@ export default {
     })
   },
   methods: {
+    setPostion(name, pos){
+      console.log("===========================setPostion===========================");
+      console.log(pos);
+    },
     add(component, componentAttrs = {}, modalAttrs = {}, modalListeners = {}) {
+
+      console.log("===========================ADD NEW MODAL===========================");
       const id = generateId()
       const name = modalAttrs.name || PREFIX + id
 
