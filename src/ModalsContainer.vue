@@ -6,6 +6,7 @@
       v-bind="modal.modalAttrs"
       v-on="modal.modalListeners"
       @closed="remove(modal.id)"
+      :ref="modal.id"
     >
       <component
         :is="modal.component"
@@ -40,6 +41,7 @@ export default {
     setPostion(name, pos){
       console.warn("===========================setPostion===========================");
       console.warn(pos);
+      this.$refs[name].setPosition(pos);
     },
     add(component, componentAttrs = {}, modalAttrs = {}, modalListeners = {}) {
 

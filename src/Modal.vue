@@ -407,6 +407,10 @@ export default {
   },
 
   methods: {
+    setPosition(pos){
+      shiftLeft = pos.left;
+      shiftTop = pos.Top;
+    },
     startTransitionEnter() {
       this.visibility.overlay = true
       this.visibility.modal = true
